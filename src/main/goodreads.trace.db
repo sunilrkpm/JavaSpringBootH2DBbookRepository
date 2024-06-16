@@ -1,0 +1,41 @@
+2024-06-16 05:29:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table book(\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    name varchar([*](255),\000d\000a    imageUrl varchar(255),\000d\000a)"; expected "long"; SQL statement:
+create table book(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar((255),
+    imageUrl varchar(255),
+) [42001-214]
+2024-06-16 05:30:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table book(\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    name varchar(255),\000d\000a    imageUrl varchar(255),\000d\000a[*])"; expected "identifier"; SQL statement:
+create table book(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255),
+    imageUrl varchar(255),
+) [42001-214]
+2024-06-16 05:31:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table book(\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    name varchar([*](255),\000d\000a    imageUrl varchar(255)\000d\000a)"; expected "long"; SQL statement:
+create table book(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar((255),
+    imageUrl varchar(255)
+) [42001-214]
+2024-06-16 05:52:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from book"; expected "identifier"; SQL statement:
+delete * from book [42001-214]
+2024-06-16 06:20:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table book(\000d\000a   id INT PRIMARY KEY [*]AUTO_INCREMANE,\000d\000a   name varchar(255),\000d\000a   imageUrl varchar(255)\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table book(
+   id INT PRIMARY KEY AUTO_INCREMANE,
+   name varchar(255),
+   imageUrl varchar(255)
+) [42001-214]
+2024-06-16 06:20:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table if not exists  book(\000d\000a   id INT PRIMARY KEY [*]AUTO_INCREMANE,\000d\000a   name varchar(255),\000d\000a   imageUrl varchar(255)\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table if not exists  book(
+   id INT PRIMARY KEY AUTO_INCREMANE,
+   name varchar(255),
+   imageUrl varchar(255)
+) [42001-214]
+2024-06-16 08:42:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "update book set name = ? where id = [*]"; expected "ALL (, ANY (, SOME ("; SQL statement:
+update book set name = ? where id =  [42001-214]
